@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CV Interativo — Axel</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div id="app">
+
+    <header class="header">
+  <div class="brand">
+    <img src="ft.jpeg" alt="Foto de Axel" class="brand-photo"/>
+    <div class="brand-info">
+      <h1>Axel</h1>
+      <p>CV - Criativo</p>
+    </div>
+  </div>
+  <nav class="progress">
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill" style="width:0%"></div>
+    </div>
+    <span id="progressText">0% concluído</span>
+  </nav>
+</header>
+
+
+    <main class="layout">
+      <section class="panel panel-left">
+        <h2>Missão</h2>
+        <p>Completa desafios curtos. Cada vitória revela uma competência e um pedaço do meu percurso.</p>
+
+        <div id="challengeArea" class="challenge-area">
+          <h3 id="challengeTitle">Desafio 1</h3>
+          <p id="challengeDesc"></p>
+
+          <div id="challengeContent" class="challenge-content">
+            <!-- UI dinâmica do desafio é gerada via JS -->
+          </div>
+
+          <div class="challenge-actions">
+            <button id="submitBtn" class="btn primary">Submeter</button>
+            <button id="skipBtn" class="btn ghost">Saltar</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel panel-right">
+        <h2>Competências desbloqueadas</h2>
+        <div id="skillsGrid" class="skills-grid">
+          <!-- Cartas de skills aparecem aqui -->
+        </div>
+
+        <h2 class="mt">Perfil & contactos</h2>
+        <div class="profile-card">
+          <p><strong>Localização:</strong> Aveiro, Portugal</p>
+          <p><strong>Email:</strong> axeljoseph@ua.pt</p>
+          <p><strong>LinkedIn:</strong> https://www.linkedin.com/in/axel-joseph-medina-pereira-668800399/</p>
+          <p><strong>GitHub:</strong> https://github.com/Axelito-22</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>CV Interativo — Axel Pereira.</p>
+    </footer>
+
+  </div>
+
+  <div id="toast" class="toast">Desbloqueado!</div>
+
+ <!-- Modal de finalização -->
+<div id="modalFinal" class="modal hidden">
+  <div class="modal-content">
+    <h3>Parabéns! Missão concluída</h3>
+    <p>Todos os desafios foram resolvidos. As competências estão totalmente visíveis.</p>
+    <div class="modal-actions">
+      <button id="closeBtn" class="btn ghost">Fechar</button>
+      <button id="restartBtn" class="btn primary">Recomeçar</button>
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
